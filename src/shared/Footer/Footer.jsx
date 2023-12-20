@@ -9,12 +9,12 @@ const Footer = () => {
             <div className="mb-6 md:mb-0">
               <a href="https://flowbite.com/" className="flex items-center">
                 <img
-                  src="https://flowbite.com/docs/images/logo.svg"
+                  src="https://i.ibb.co/yk8pY4m/icons8-task-completed-60.png"
                   className="h-8 me-3"
                   alt="FlowBite Logo"
                 />
                 <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
-                  Flowbite
+                  Taskly
                 </span>
               </a>
             </div>
