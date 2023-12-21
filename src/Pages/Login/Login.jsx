@@ -80,9 +80,6 @@ const Login = () => {
               <button onClick={handleGoogle} className="btn btn-secondary">
                 <i className="fab fa-google mr-2"></i> Google
               </button>
-              <button className="btn btn-gray">
-                <i className="fab fa-github mr-2"></i> GitHub
-              </button>
             </div>
           </div>
         </div>
