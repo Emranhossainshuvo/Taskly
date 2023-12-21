@@ -3,12 +3,24 @@ import { useForm } from "react-hook-form";
 import { AuthContext } from "../../Providers/AuthProvider";
 
 const Register = () => {
-  // functionality from react hook form document
   const {
     register,
     handleSubmit,
     formState: { errors },
   } = useForm();
+
+  
+  const { createUser, googleSignIn } = useContext(AuthContext);
+  
+  const handleGoogle = () => {
+    googleSignIn()
+    .then(res => {
+      console.log(res)
+    })
+    .catch(error => {
+      console.log(error)
+    })
+  }
 
   const onSubmit = (data) => {
     console.log(data);
@@ -22,71 +34,83 @@ const Register = () => {
       });
   };
 
-  const { createUser } = useContext(AuthContext);
-
   return (
     <>
-      <div className="hero min-h-screen bg-base-200">
-        <div className="hero-content flex-col lg:flex-row-reverse">
-          <div className="card shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
-            <form onSubmit={handleSubmit(onSubmit)} className="card-body">
-              {/* name field */}
-              <div className="form-control">
-                <label className="label">
-                  <span className="label-text">Name</span>
-                </label>
-                <input
-                  type="text"
-                  {...register("name", { required: true })}
-                  placeholder="Your name"
-                  className="input input-bordered"
-                />
-                {errors.name && <span>This field is required</span>}
-              </div>
-              {/* email field */}
-              <div className="form-control">
-                <label className="label">
-                  <span className="label-text">Email</span>
-                </label>
-                <input
-                  type="email"
-                  {...register("email", { required: true })}
-                  placeholder="email"
-                  className="input input-bordered"
-                />
-                {errors.email && <span>This field is required</span>}
-              </div>
-              {/* password field */}
-              <div className="form-control">
-                <label className="label">
-                  <span className="label-text">Password</span>
-                </label>
-                <input
-                  {...register("password", {
-                    required: true,
-                    minLength: 6,
-                    maxLength: 20,
-                  })}
-                  type="password"
-                  placeholder="password"
-                  className="input input-bordered"
-                />
-                {errors.password?.type === "minlength" && (
-                  <p className="text-red-500">
-                    Password must conatain 6 letters
-                  </p>
-                )}
-                {errors.password && <span>This field is required</span>}
-                <label className="label">
-                  <a href="#" className="label-text-alt link link-hover">
-                    Forgot password?
-                  </a>
-                </label>
-              </div>
-              <div className="form-control mt-6">
-                <button className="btn btn-primary">Login</button>
-              </div>
-            </form>
+      <div className="hero min-h-screen bg-gradient-to-br from-primary to-secondary flex items-center justify-center">
+        <div className="card w-full max-w-md shadow-2xl bg-base-200 rounded-lg overflow-hidden">
+          <div className="card-body p-6">
+            <h2 className="text-3xl font-bold mb-4 text-primary">Register</h2>
+
+            {/* Name field */}
+            <div className="form-control">
+              <label className="label">
+                <span className="label-text text-secondary">Name</span>
+              </label>
+              <input
+                type="text"
+                {...register("name", { required: true })}
+                placeholder="Your name"
+                className="input input-bordered"
+              />
+              {errors.name && <span className="text-red-500">This field is required</span>}
+            </div>
+
+            {/* Email field */}
+            <div className="form-control mt-4">
+              <label className="label">
+                <span className="label-text text-secondary">Email</span>
+              </label>
+              <input
+                type="email"
+                {...register("email", { required: true })}
+                placeholder="Email"
+                className="input input-bordered"
+              />
+              {errors.email && <span className="text-red-500">This field is required</span>}
+            </div>
+
+            {/* Password field */}
+            <div className="form-control mt-4">
+              <label className="label">
+                <span className="label-text text-secondary">Password</span>
+              </label>
+              <input
+                type="password"
+                {...register("password", {
+                  required: true,
+                  minLength: 6,
+                  maxLength: 20,
+                })}
+                placeholder="Password"
+                className="input input-bordered"
+              />
+              {errors.password?.type === "minlength" && (
+                <p className="text-red-500">Password must contain 6 letters</p>
+              )}
+              {errors.password && <span className="text-red-500">This field is required</span>}
+              <label className="label">
+                <a href="#" className="label-text-alt link link-hover">
+                  Forgot password?
+                </a>
+              </label>
+            </div>
+
+            {/* Register button */}
+            <div className="form-control mt-6">
+              <button className="btn btn-primary w-full" onClick={handleSubmit(onSubmit)}>
+                Register
+              </button>
+            </div>
+
+            {/* Google and GitHub login buttons */}
+            <div className="flex items-center justify-between mt-4">
+              <button onClick={handleGoogle} className="btn btn-secondary">
+                <i className="fab fa-google mr-2"></i> Google
+              </button>
+              <button className="btn btn-gray">
+                <i className="fab fa-github mr-2"></i> GitHub
+              </button>
+            </div>
           </div>
         </div>
       </div>
