@@ -1,21 +1,24 @@
-import { useForm } from "react-hook-form";
-
-const Login = () => {
-  const {
-    register,
-    handleSubmit,
-    watch,
-    formState: { errors },
-  } = useForm();
-
+const Register = () => {
   return (
     <>
       <div className="hero min-h-screen bg-base-200">
         <div className="hero-content flex-col lg:flex-row-reverse">
-        
+          
           <div className="card shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
             <form className="card-body">
-              {/* email field */}
+                {/* email field */}
+              <div className="form-control">
+                <label className="label">
+                  <span className="label-text">Name</span>
+                </label>
+                <input
+                  type="text"
+                  placeholder="Your name"
+                  className="input input-bordered"
+                  required
+                />
+              </div>
+              {/* name field */}
               <div className="form-control">
                 <label className="label">
                   <span className="label-text">Email</span>
@@ -55,4 +58,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default Register;
