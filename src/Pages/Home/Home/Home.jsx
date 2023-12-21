@@ -1,11 +1,9 @@
-import React from 'react';
+import LandingPage from '../../LandingPage/LandingPage';
 
-const Home = () => {
-    return (
-        <div>
-          <h1>This is basic home page</h1>  
-        </div>
-    );
-};
+const Home = () => (
+  <div>
+    <LandingPage />
+  </div>
+);
 
 export default Home;
