@@ -1,12 +1,11 @@
 import { useForm } from "react-hook-form";
 
 const Login = () => {
-  const {
-    register,
-    handleSubmit,
-    watch,
-    formState: { errors },
-  } = useForm();
+
+  // functionalities from react hook form documentation
+  const {register,handleSubmit, watch, formState: { errors },} = useForm();
+
+  const onSubmit = (data) => console.log(data)
 
   return (
     <>
@@ -14,7 +13,7 @@ const Login = () => {
         <div className="hero-content flex-col lg:flex-row-reverse">
         
           <div className="card shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
-            <form className="card-body">
+            <form onSubmit={handleSubmit(onSubmit)} className="card-body">
               {/* email field */}
               <div className="form-control">
                 <label className="label">
@@ -22,6 +21,7 @@ const Login = () => {
                 </label>
                 <input
                   type="email"
+                  {...register("email")}
                   placeholder="email"
                   className="input input-bordered"
                   required
@@ -34,6 +34,7 @@ const Login = () => {
                 </label>
                 <input
                   type="password"
+                  {...register("password")}
                   placeholder="password"
                   className="input input-bordered"
                   required
