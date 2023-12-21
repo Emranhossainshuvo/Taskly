@@ -5,7 +5,7 @@ import { AuthContext } from "../../Providers/AuthProvider";
 const Login = () => {
 
   // functionalities from react hook form documentation
-  const {register,handleSubmit, watch, formState: { errors },} = useForm();
+  const {register,handleSubmit, formState: { errors },} = useForm();
 
   // firebase auth from authProvider 
   const {signIn} = useContext(AuthContext); 
