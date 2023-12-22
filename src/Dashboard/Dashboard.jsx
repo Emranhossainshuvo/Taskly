@@ -17,6 +17,8 @@ const Dashboard = () => {
           <h1>Create a new task</h1>
           <GoPlus />
         </div>
+
+        <div className="divider divider-neutral"></div>
       </Link>
       <TaskManagementDashboard></TaskManagementDashboard>
     </div>
