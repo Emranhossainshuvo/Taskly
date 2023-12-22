@@ -12,7 +12,7 @@ const FeatureCard = ({ title, description, icon }) => {
 
 const FeatureSection = () => {
   return (
-    <div className="mt-8 grid grid-cols-1 mb-20 sm:grid-cols-2 md:grid-cols-3 gap-6">
+    <div data-aos="fade-up" className="mt-8 grid grid-cols-1 mb-20 sm:grid-cols-2 md:grid-cols-3 gap-6">
       <FeatureCard
         title="User Authentication"
         description="Securely log in, register, and log out from the website."

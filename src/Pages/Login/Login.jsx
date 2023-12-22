@@ -31,7 +31,7 @@ const Login = () => {
   return (
     <>
       <div className="hero min-h-screen bg-gradient-to-br from-primary to-secondary flex items-center justify-center">
-        <div className="card w-full max-w-md shadow-2xl bg-base-200 rounded-lg overflow-hidden">
+        <div  data-aos="fade-up" className="card w-full max-w-md shadow-2xl bg-base-200 rounded-lg overflow-hidden">
           <div className="card-body p-6">
             <h2 className="text-3xl font-bold mb-4 text-primary">Login</h2>
 

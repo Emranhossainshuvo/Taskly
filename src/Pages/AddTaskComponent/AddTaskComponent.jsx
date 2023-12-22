@@ -34,7 +34,7 @@ const AddTaskComponent = () => {
   };
 
   return (
-    <div className="max-w-7xl p-8 bg-[#cfcaa9] mx-auto text-center mt-10 rounded-lg">
+    <div  data-aos="fade-up" className="max-w-7xl p-8 bg-[#cfcaa9] mx-auto text-center mt-10 rounded-lg">
       <div className="md:flex md:gap-8 justify-center">
         <div className="md:w-1/2 text-left">
           <h3 className="text-4xl text-[#0a090b] font-bold mb-8">Add a new task</h3>

@@ -1,7 +1,7 @@
 
 const ServicesPage = () => {
   return (
-    <div className="container mx-auto my-8 p-8 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg">
+    <div data-aos="fade-up" className="container mx-auto my-8 p-8 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg">
       <h1 className="text-4xl font-semibold mb-6 text-gray-800 dark:text-white">
         Our Services
       </h1>

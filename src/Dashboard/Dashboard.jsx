@@ -8,7 +8,7 @@ const Dashboard = () => {
   const { user } = useContext(AuthContext);
 
   return (
-    <div>
+    <div  data-aos="fade-up">
       <h1 className="text-center my-10 text-3xl font-semibold">
         Welcome {user?.displayName}
       </h1>

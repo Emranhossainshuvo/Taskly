@@ -1,8 +1,9 @@
-import { Link } from "react-router-dom";
-
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import { Link } from 'react-router-dom';
 const LandingPage = () => {
   return (
-    <div
+    <div data-aos="fade-up"
       className="bg-cover bg-center my-20 h-screen flex items-center justify-center"
       style={{
         backgroundImage:
@@ -10,7 +11,10 @@ const LandingPage = () => {
         opacity: 0.8,
       }}
     >
-      <div className="max-w-2xl bg-white p-8 shadow-md rounded-md">
+      <div
+        
+        className="max-w-2xl bg-white p-8 shadow-md rounded-md"
+      >
         <h1 className="text-4xl font-bold mb-4 text-gray-800">
           Welcome to SCC Technovision Inc.
         </h1>
@@ -18,7 +22,7 @@ const LandingPage = () => {
           We build collaborative task management platforms to enhance your
           productivity.
         </p>
-        <Link to='/register'>
+        <Link to="/register">
           <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
             Let's Explore
           </button>
