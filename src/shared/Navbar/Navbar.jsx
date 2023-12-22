@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 const Navbar = () => {
   const [isDropdownOpen, setDropdownOpen] = useState(false);
 
-  const { logOut } = useContext(AuthContext);
+  const { logOut, user } = useContext(AuthContext);
 
   const handleLogOut = () => {
     logOut().then((res) => {
@@ -41,12 +41,12 @@ const Navbar = () => {
             <span className="sr-only">Open user menu</span>
             <img
               className="w-8 h-8 rounded-full"
-              src="/docs/images/people/profile-picture-3.jpg"
-              alt="user photo"
+              src={user?.photoURL}
+              alt={user?.displayName}
             />
           </button>
 
-          {isDropdownOpen && (
+          {(isDropdownOpen && user) && (
             <div className="relative z-50">
               {/* Dropdown menu */}
               <div className="absolute right-0 mt-2 w-48 bg-white border rounded-lg shadow-lg dark:bg-gray-700 dark:border-gray-600">

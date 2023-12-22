@@ -51,7 +51,6 @@ const AboutPage = () => {
         {/* Team member 1 */}
         <div className="bg-gray-100 dark:bg-gray-700 p-6 rounded-lg shadow-md">
           <img
-            src="/path/to/team-member-1.jpg"
             alt="Team Member 1"
             className="w-full h-40 object-cover mb-4 rounded-md"
           />
@@ -64,7 +63,6 @@ const AboutPage = () => {
         {/* Team member 2 */}
         <div className="bg-gray-100 dark:bg-gray-700 p-6 rounded-lg shadow-md">
           <img
-            src="/path/to/team-member-2.jpg"
             alt="Team Member 2"
             className="w-full h-40 object-cover mb-4 rounded-md"
           />
@@ -77,7 +75,6 @@ const AboutPage = () => {
         {/* Team member 3 */}
         <div className="bg-gray-100 dark:bg-gray-700 p-6 rounded-lg shadow-md">
           <img
-            src="/path/to/team-member-3.jpg"
             alt="Team Member 3"
             className="w-full h-40 object-cover mb-4 rounded-md"
           />
