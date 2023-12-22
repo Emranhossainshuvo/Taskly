@@ -10,6 +10,7 @@ import Dashboard from "../Dashboard/Dashboard";
 import AboutPage from "../Pages/About/About";
 import ServicesPage from "../Pages/ServicesPage/ServicesPage";
 import ProfileComponent from "../Pages/ProfileComponent/ProfileComponent";
+import AddTaskComponent from "../Pages/AddTaskComponent/AddTaskComponent";
 
 
 export const router = createBrowserRouter([
@@ -45,6 +46,10 @@ export const router = createBrowserRouter([
         {
           path: '/profile', 
           element: <ProfileComponent></ProfileComponent>
+        }, 
+        {
+          path: '/addtask', 
+          element: <AddTaskComponent></AddTaskComponent>
         }
       ]
     },

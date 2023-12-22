@@ -1,4 +1,4 @@
-import React from "react";
+import { Link } from "react-router-dom";
 
 const LandingPage = () => {
   return (
@@ -18,15 +18,11 @@ const LandingPage = () => {
           We build collaborative task management platforms to enhance your
           productivity.
         </p>
-        <button
-          className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full"
-          onClick={() => {
-            // Handle "Let's Explore" button click, e.g., navigate to login page
-            console.log("Let's Explore clicked!");
-          }}
-        >
-          Let's Explore
-        </button>
+        <Link to='/register'>
+          <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
+            Let's Explore
+          </button>
+        </Link>
       </div>
     </div>
   );
